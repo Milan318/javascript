@@ -1,0 +1,15 @@
+<script>
+    let num=4;
+    let printNum1=()=>{
+        let num=8;
+        let printNum2=()=>{
+            let num=31;
+            console.log("inner" +num);   
+        }
+        printNum2();
+        console.log("main"+num);
+    }
+        printNum1();
+        console.log("outer"+num);
+        
+</script>
