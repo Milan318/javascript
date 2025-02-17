@@ -1,0 +1,18 @@
+<script>
+// Factorial Flow check 
+
+function fact(val){
+    let f1;
+    if(val<=1){
+        return 1;
+    }
+    else{
+        f1=fact(val-1);
+    }
+    console.log(val+"*"+f1);
+    return val*f1;    
+} 
+console.log(fact(5));
+
+
+</script>
