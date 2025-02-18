@@ -1,52 +1,284 @@
 <script>
-    //1. Check if a Number is Positive
-    
-    let num=7;
-    if(num>0){
-        console.log(num+"number is positive");
+  //1. Check if a Number is Positive
+
+  let num = 7;
+  if (num > 0) {
+    console.log(num + "number is positive");
+  }
+
+  //2. Check if a Number is Even or Odd
+
+  let number = 8;
+  if (number % 2 === 0) {
+    console.log(number + "number is even");
+  } else {
+    console.log(number + "number is odd");
+  }
+
+  //3. Check Divisibility by 3 and 5 (Nested if)
+
+  let value = 15;
+  if (value % 3 === 0) {
+    if (value % 5 === 0) {
+      console.log(value + "is divisible by 3 & 5");
+    } else {
+      console.log(value + "is not divisible by 3 & 5");
     }
+  } else {
+    console.log(value + " is not divisible by 3");
+  }
 
-    //2. Check if a Number is Even or Odd
+  //4. Determine Grade Based on Score (if-else if)
+  let score = 85;
+  if (score >= 90) {
+    console.log("grade=A");
+  } else if (score >= 80) {
+    console.log("grade=B");
+  } else if (score >= 70) {
+    console.log("grade=C");
+  } else if (score >= 60) {
+    console.log("grade=D");
+  } else {
+    console.log("Fail");
+  }
 
-    let number=8;
-    if(number %2===0){
-        console.log(number+"number is even");    
-    }else{
-        console.log(number+"number is odd");   
+  //5. Login Simulation (Nested if)
+
+  let username = "milan";
+  let password = "12345";
+
+  if (username === "milan") {
+    if (password === "12345") {
+      console.log("Login successfully");
+    } else {
+      console.log("Invalid Password");
     }
+  } else {
+    console.log("Unknown user");
+  }
 
-    //3. Check Divisibility by 3 and 5 (Nested if)
+  //6. Temperature Classification (if-else)
+  
+  let temp = 5;
+if (temp >= 30) {
+    console.log("temperature: " + temp + " temperature is hot");
 
-    let value=15;
-    if(value %3 ===0){
-        if(value %5===0){
-            console.log(value+"is divisible by 3 & 5");  
-        }else{
-            console.log(value+"is not divisible by 3 & 5"); 
+}
+else if (temp >= 20) {
+    console.log("temperature: " + temp + " temperature is Warm");
+}
+else {
+    console.log("temperature: " + temp + " temperature is cold");
+}
+
+//7. Day of the Week from a Number (if-else if)
+
+let numbers = 2;
+let day = "tuesday";
+if (numbers === 1 && day === "monday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+} else if (numbers === 2 && day === "tuesday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else if (numbers === 3 && day === "wednesday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else if (numbers === 4 && day === "thursday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else if (numbers === 5 && day === "friday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else if (numbers === 6 && day === "saturday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else if (numbers === 7 && day === "sunday") {
+    console.log("Day Number: " + number + " Day Name: " + day);
+
+}
+else {
+    console.log("invalid...");
+
+}
+//8. Discount Eligibility (Nested if)
+
+let member = true;
+let spending = 500;
+
+if (member) {
+    if (spending > 100) {
+        console.log("Amount is: " + spending + " You get a 20% discount.");
+    }
+    else {
+        console.log("Amount is: " + spending + " You get a 10% discount.");
+    }
+}
+else {
+    console.log("No discount available for non-members.");
+}
+//9. Check if a String is Empty (if-else)
+
+let str = "";
+if (str === "") {
+    console.log("String is empty");
+
+}
+else {
+    console.log("String is not empty");
+}
+
+//10. Leap Year Checker (if-else)
+
+let year = 2004;
+
+if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+    console.log("year: " + year + " is a leap year.");
+}
+else {
+    console.log("year: " + year + " is not a leap year.");
+}
+
+//11. Check if Two Numbers are Both Positive (Nested if)
+
+let x = 10;
+let y = -20;
+
+if (x > 0) {
+    if (y > 0) {
+        console.log("x: " + x + " &" + " y: " + y + " Both numbers are positive.");
+    }
+    else {
+        console.log("x: " + x + "is Positive" + " y: " + y + " but y is not positive")
+    }
+}
+else {
+    console.log("x: " + x + " x is not positive.");
+}
+
+//12. Season Based on Month (if-else if)
+
+let month = 11;
+let season = "";
+if (month === 12 || month === 1 || month === 2) {
+    season = "Winter";
+} else if (month >= 3 && month <= 5) {
+    season = "Summer";
+} else if (month >= 6 && month <= 8) {
+    season = "monsoon";
+} else if (month >= 9 && month <= 11) {
+    season = "pankhar";
+} else {
+    season = "Invalid month";
+}
+console.log("Month " + month + " is in " + season + ".");
+
+//13. Voting Eligibility with Citizenship Check (Nested if)
+let age = 20;
+citizen = true;
+
+
+if (age >= 20) {
+    if (citizen) {
+        console.log("You are eligible to vote.");
+    } else {
+        console.log("You must be a citizen to vote.");
+
+    }
+}
+else {
+    console.log("You are not old enough to vote.");
+}
+
+//14. Password Length Check (if-else)
+
+let pwd = "M163189";
+
+if (pwd.length >= 8) {
+    console.log("Password is valid.");
+}
+else {
+    console.log("Password must be at least 8 characters long.");
+}
+
+// Program 15: Check if a person is eligible to watch a movie based on age
+let per_age = 20;
+if (per_age >= 15) {
+    console.log("You can watch this movie.");
+}
+else {
+    console.log("You are too young to watch this movie.");
+}
+// Program 16: Check if a number is prime
+let prime_num = 17;
+let prime = true;
+if (prime_num <= 1) {
+    prime = false;
+} else {
+    for (let i = 2; i < prime_num; i++) {
+        if (prime_num % i === 0) {
+            prime = false;
+            break;
         }
-    }else{
-        console.log(value+" is not divisible by 3");
-        
     }
+}
+if (prime) {
+    console.log(prime_num + " is a prime number.");
+} else {
+    console.log(prime_num + " is not a prime number.");
+}
 
-    //4. Determine Grade Based on Score (if-else if)
-    let score=85;
-    if(score>=90){
-        console.log("grade=A");
-    }else if(score>=80){
-        console.log("grade=B");
-    }else if(score>=70){
-        console.log("grade=C");
-    }else if(score>=60){
-        console.log("grade=D");
-    }else{
-        console.log("Fail");
-    }
+// Program 17: Check if a number is within the range 10 to 20 (inclusive)
+let range = 12;
+if (range >= 10 && range <= 20) {
+    console.log(range + " is within the range 10 to 20.");
+}
+else {
+    console.log(range + " is outside the range 10 to 20.");
+}
+// Program 18: Calculate the area based on the shape type
+let shape = "circle";
+let area = 0;
+if (shape === "circle") {
+    let radius = 10;
+    area = 22.7 * radius * radius;
+    console.log("Area of the circle is: " + area);
+} else if (shape === "rectangle") {
+    let length = 5;
+    let width = 7;
+    area = length * width;
+    console.log("Area of the rectangle is: " + area);
+} else {
+    console.log("Give proper shape name..");
+}
 
-    //5. Login Simulation (Nested if)
+// Program 19: Verify user login with username and password
+let userName = "komal2332";
+let pas = "k@5572";
 
-    let username="milan";
-    let password="12345";
-    
+if (userName === "komal2332" && pas === "k@5572") {
+    console.log("User login successful.");
+}
+else {
+    console.log("Invalid username or password.");
+}
+
+// Program 20: Check if a person meets multiple conditions for a special offer
+let customer_age = 30;
+let member_sts = true;
+let purchase_amount = 250;
+if (customer_age >= 25 && member_sts && purchase_amount >= 200) {
+    console.log("Congratulations! You qualify for our special offer.");
+} else {
+    console.log("Sorry, you do not qualify for the special offer.");
+}
+
+
+
 
 </script>
