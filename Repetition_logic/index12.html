@@ -1,0 +1,9 @@
+<script>
+    //prog-12 Find the sum of digits of a number
+let number = 3053, sum = 0;
+while (number>0) {
+ sum += number % 10;
+ number = Math.floor(number / 10);
+}
+console.log(`Sum of digits: ${sum}`);
+</script>

@@ -1,0 +1,12 @@
+<script>
+    //prog-16 Find the largest digit in a number
+
+let num = 8375;
+let max=0;
+while (num > 0) {
+ let digit = num % 10;
+ if (digit > max) max = digit;
+ num =Math.floor (num / 10);
+}
+console.log("Largest digit:", max);
+</script>
