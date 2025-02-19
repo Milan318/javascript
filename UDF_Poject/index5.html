@@ -1,0 +1,16 @@
+<script>
+    //5 Closure nested function
+
+ let num = 21;
+ let printNum1=()=>{
+     num =25;
+    let printNum2=()=>{
+         num=30;
+        console.log("inner " + num); 
+    }
+    printNum2();
+    console.log("main "+ num);
+ }
+ printNum1();
+ console.log("outer "+ num);
+</script>
