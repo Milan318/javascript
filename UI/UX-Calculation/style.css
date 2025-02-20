@@ -4,6 +4,7 @@
     padding: 0px;
 }
 body{
+    padding: 70px;
     display: flex;
     justify-content: center;
 }
@@ -14,7 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 50px;
-    background-color: rgb(184, 197, 130);
+    background-color: rgb(55, 205, 182);
 }
 
 
