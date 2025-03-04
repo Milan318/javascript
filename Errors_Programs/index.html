@@ -1,3 +1,105 @@
 <script>
-    
+
+//1. Basic Try-Catch Example
+
+//    try {
+//     throw "An error occurred";
+// } catch (error) {
+//     console.log("Caught error:", error);
+// }
+
+//2. Handling Multiple Exceptions
+
+// try {
+//     let num = parseInt("ABC");
+//     if (isNaN(num)) {
+//         throw new Error("Invalid number format");
+//     }
+// } catch (error) {
+//     console.log("Error:", error.message);
+// }
+
+//3. Using Finally Block
+
+// try {
+//     console.log("Executing try block");
+// } catch (error) {
+//     console.log("Error caught");
+// } finally {
+//     console.log("Finally block executed");
+// }
+
+//4. Division by Zero Exception
+// function divide(a, b) {
+//     if (b === 0) {
+//         throw new Error("Division by zero is not allowed");
+//     }
+//     return a / b;
+// }
+
+// try {
+//     console.log(divide(10, 2));
+// } catch (error) {
+//     console.log("Exception:", error.message);
+// }
+
+//5. Try-Catch Inside a Function
+// function riskyFunction() {
+//     try {
+//         throw new Error("Something went wrong");
+//     } catch (error) {
+//         console.log("Caught an error in function:", error.message);
+//     }
+// }
+
+// riskyFunction();
+
+//6. Handling Undefined Variables
+// try {
+//     console.log(undefinedVariable);
+// } catch (error) {
+//     console.log("Caught an error:", error.message);
+// }
+
+//7. Catching TypeErrors
+// try {
+//     let obj = null;
+//     console.log(obj.name);
+// } catch (error) {
+//     console.log("Caught TypeError:", error.message);
+// }
+
+//8. Nested Try-Catch
+// try {
+//     try {
+//         throw new Error("Inner error");
+//     } catch (innerError) {
+//         console.log("Inner catch:", innerError.message);
+//         throw new Error("Outer error");
+//     }
+// } catch (outerError) {
+//     console.log("Outer catch:", outerError.message);
+// }
+
+//9. Custom Error Class
+// class CustomError extends Error {
+//     constructor(message) {
+//         super(message);
+//         this.name = "CustomError";
+//     }
+// }
+
+// try {
+//     throw new CustomError("This is a custom error");
+// } catch (error) {
+//     console.log(`${error.name}: ${error.message}`);
+// }
+
+//10. Using Try-Catch with JSON Parsing
+try {
+    let data = JSON.parse("{invalidJson}");
+} catch (error) {
+    console.log("Invalid JSON format:", error.message);
+}
+
 </script>
