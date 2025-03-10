@@ -1,0 +1,43 @@
+<script>
+    // Data Abstrasction 
+  
+   class Fruits{
+        printFruit(){
+            console.log("Eating fruits");
+        }
+   }
+
+   class Apple extends Fruits{
+    printFruit(){
+        console.log("Eating apple");
+    }
+   }
+
+   class Pineapple extends Fruits{
+    printFruit(){
+        console.log("Eating pineapple");
+    }
+   }
+
+   class Banana extends Fruits{
+    printFruit(){
+        console.log("Eating banana");   
+    }
+   }
+
+   let FruitObj = new Fruits();
+   FruitObj.printFruit();
+
+   let FruitObj1 = new Pineapple();
+   FruitObj1.printFruit();
+
+   let FruitObj2 = new Banana();
+   FruitObj2.printFruit();
+
+
+
+
+
+
+
+</script>
