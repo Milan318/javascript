@@ -1,4 +1,4 @@
-<script>
+
     // Data Abstrasction 
   
    class Fruits{
@@ -34,4 +34,3 @@
    let FruitObj2 = new Banana();
    FruitObj2.printFruit();
 
-</script>

@@ -1,4 +1,4 @@
-<script>
+
     // Polymorphism
     
     // class Shape {
@@ -67,4 +67,3 @@
     brandPhone.forEach(phone=>phone.Brand());
 
 
-</script>
