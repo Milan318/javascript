@@ -34,7 +34,5 @@ let std2 = new Student("Milan Mandaviya", 24, "A", "Full Stack Devlopment", "Htm
 let std3 = new Student("Akshar Parekh", 24, "A", "Full Stack Devlopment", "Bootstrap");
 
 std1.getData();
-console.log("-------------------------");
 std2.getData();
-console.log("-------------------------");
 std3.getData();
