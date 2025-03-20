@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    transition: top 0.4s ease-in-out;
+}
+
+.content {
+    height: 2000px; /* Just to enable scrolling */
+    background: linear-gradient(white, lightgray);
+    padding-top: 80px; /* To prevent content from hiding under the header */
+}
