@@ -29,4 +29,8 @@ function showSlide(n){
 
 function changeSlide(n){
     showSlide(currentSlide+=n);
+
 }
+setInterval(() => {
+    changeSlide(1)
+}, 3000);
