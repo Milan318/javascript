@@ -17,8 +17,16 @@ form.addEventListener('submit',(event)=>{
         password: password.value,
         email: email.value
     }
-
-    users.push(obj);
+     
+    if(edit==-1){
+        users.push(obj);
+    }else{
+        users[edit]=obj;
+        edit=-1;
+        update.innerHTML = "Registor";
+        update.classList.remove('btn-success');
+        update.classList.add('btn-primary');
+    }
     usernme.value = '';
     password.value = '';
     email.value = '';
@@ -61,6 +69,7 @@ let editData=(index)=>{
     update.innerHTML="Update";
     update.classList.remove('btn-primary');
     update.classList.add('btn-success');
+    edit=index;
 
 }
 
