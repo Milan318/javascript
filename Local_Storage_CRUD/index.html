@@ -25,6 +25,44 @@
                         <label for="email" class="form-label">E-mail</label>
                         <input type="email" class="form-control" name="email" id="email">
                     </div>
+            <!----------------Gender----------------->
+                    <label for="gender" class="form-label">Gender</label>
+                    <div class="mb-3 ">
+                        <div class="form-check form-check-inline">
+                            <label for="gender1" class="form-check-label">Male</label>
+                            <input type="radio" name="gender" id="gender1" class="  form-check-input">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="gender2" class="form-check-label">Female</label>
+                            <input type="radio" name="gender" id="gender2" class="form-check-input">
+                        </div>
+                        <span class="d-none genderError text-danger">Gender is required.</span>
+                    </div>
+
+            <!----------------Hobby-------------------->
+
+            <label class="form-label">Hobby</label>
+            <div class="mb-3">
+                <div class="form-check form-check-inline ">
+                    <label class="form-check-label" for="hobby1">Playing Game</label>
+                    <input class="form-check-input " name="hobby" type="checkbox" value="" id="hobby1">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="hobby2">Reading</label>
+                    <input class="form-check-input" name="hobby" type="checkbox" value="" id="hobby2">
+                </div>
+            </div>
+               <!------------City--------------->
+            <div class="mb-3">
+                <label for="city" class=" form-label">City</label>
+                <select class="form-select" id="city" >
+                    <option selected disabled>Select City</option>
+                    <option value="1">Navsari</option>
+                    <option value="2">Surat</option>
+                    <option value="3">Ahemdabad</option>
+                  </select>
+            </div>
+
                     <button id="update" class="btn btn-primary">Registor</button>
                 </form>
             </div>
