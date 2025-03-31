@@ -4,6 +4,8 @@ let email = document.getElementById('email');
 let form = document.getElementById('form');
 let showData = document.querySelector('#table tbody');
 let update = document.getElementById('update');
+let gender = document.querySelectorAll("input[type='radio']");
+let hobby = document.querySelectorAll("input[type='checkbox']");
 let edit = -1;
 
 
@@ -12,10 +14,19 @@ username.focus();
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
 
+    let genderValue = '';
+    if(gender[0].checked){
+        genderValue=gender[0].value;
+    }
+    else{
+        genderValue=gender[1].value;
+    }
+
     let obj={
         username: username.value,
         password: password.value,
-        email: email.value
+        email: email.value,
+        gender: genderValue
     }
      
     if(edit==-1){
@@ -44,6 +55,7 @@ const display = () =>{
             <td>${user.username}</td>
             <td>${user.password}</td>
             <td>${user.email}</td>
+            <td>${user.gender}</td>
             <td>
                 <button class="btn btn-danger" onclick="deleteData(${index})">Delete</button>
                 <button class="btn btn-warning" onclick="editData(${index})">Edit</button>
