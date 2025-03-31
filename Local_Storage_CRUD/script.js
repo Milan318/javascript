@@ -67,7 +67,7 @@ const display = () =>{
             <td>${user.password}</td>
             <td>${user.email}</td>
             <td>${user.gender}</td>
-            <td>${user.hobby}</td>
+            <td>${user.hobby.toString()}</td>
             <td>
                 <button class="btn btn-danger" onclick="deleteData(${index})">Delete</button>
                 <button class="btn btn-warning" onclick="editData(${index})">Edit</button>
