@@ -52,6 +52,8 @@ form.addEventListener('submit',(event)=>{
     usernme.value = '';
     password.value = '';
     email.value = '';
+    gender.value = '';
+    hobby.value = '';
     username.focus();
     display();
 })
