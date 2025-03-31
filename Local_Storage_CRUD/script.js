@@ -22,12 +22,23 @@ form.addEventListener('submit',(event)=>{
         genderValue=gender[1].value;
     }
 
+    let hobbyArray =[];
+    for (i=0;i<hobby.length;i++){
+        if(hobby[i].checked){
+            hobbyArray.push(hobby[i].value);
+        }
+    }
+
+
     let obj={
         username: username.value,
         password: password.value,
         email: email.value,
-        gender: genderValue
+        gender: genderValue,
+        hobby: hobbyArray
     }
+   
+    
      
     if(edit==-1){
         users.push(obj);
@@ -56,6 +67,7 @@ const display = () =>{
             <td>${user.password}</td>
             <td>${user.email}</td>
             <td>${user.gender}</td>
+            <td>${user.hobby}</td>
             <td>
                 <button class="btn btn-danger" onclick="deleteData(${index})">Delete</button>
                 <button class="btn btn-warning" onclick="editData(${index})">Edit</button>
