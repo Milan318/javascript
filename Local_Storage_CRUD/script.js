@@ -32,7 +32,7 @@ form.addEventListener('submit',(event)=>{
 
     let cityValue = [];
 
-    for (let i = 0; i < city.length; i++) {
+    for (i = 0; i < city.length; i++) {
 
       if (city[i].selected) {
         cityValue.push(city[i].value);
