@@ -6,6 +6,7 @@ let showData = document.querySelector('#table tbody');
 let update = document.getElementById('update');
 let gender = document.querySelectorAll("input[type='radio']");
 let hobby = document.querySelectorAll("input[type='checkbox']");
+let city = document.getElementById("city");
 let edit = -1;
 
 
@@ -29,13 +30,24 @@ form.addEventListener('submit',(event)=>{
         }
     }
 
+    let cityValue = [];
+
+    for (let i = 0; i < city.length; i++) {
+
+      if (city[i].selected) {
+        cityValue.push(city[i].value);
+
+      }
+    } 
+
 
     let obj={
         username: username.value,
         password: password.value,
         email: email.value,
         gender: genderValue,
-        hobby: hobbyArray
+        hobby: hobbyArray,
+        city: cityValue
     }
    
     
@@ -54,6 +66,7 @@ form.addEventListener('submit',(event)=>{
     email.value = '';
     gender.value = '';
     hobby.value = '';
+    city.value = '';
     username.focus();
     display();
 })
@@ -70,6 +83,7 @@ const display = () =>{
             <td>${user.email}</td>
             <td>${user.gender}</td>
             <td>${user.hobby.toString()}</td>
+            <td>${user.city}</td>
             <td>
                 <button class="btn btn-danger" onclick="deleteData(${index})">Delete</button>
                 <button class="btn btn-warning" onclick="editData(${index})">Edit</button>
