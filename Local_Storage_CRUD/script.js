@@ -7,10 +7,9 @@ let update = document.getElementById('update');
 let gender = document.querySelectorAll("input[type='radio']");
 let hobby = document.querySelectorAll("input[type='checkbox']");
 let city = document.getElementById("city");
+let users=JSON.parse(localStorage.getItem("users")) || [];
 let edit = -1;
 
-
-let users=[];
 username.focus();
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
@@ -61,6 +60,7 @@ form.addEventListener('submit',(event)=>{
         update.classList.remove('btn-success');
         update.classList.add('btn-primary');
     }
+    localStorage.setItem("users",JSON.stringify(users));
     usernme.value = '';
     password.value = '';
     email.value = '';
@@ -96,6 +96,7 @@ const display = () =>{
 
 let deleteData=(index)=>{
     users.splice(index,1);
+    localStorage.setItem("users",JSON.stringify(users));
     display();
 }
 
