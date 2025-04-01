@@ -17,15 +17,21 @@ form.addEventListener('submit',(event)=>{
     let genderValue = '';
     if(gender[0].checked){
         genderValue=gender[0].value;
+        gender[0].checked=false;
     }
     else{
         genderValue=gender[1].value;
+        gender[1].checked=false;
     }
 
     let hobbyArray =[];
     for (i=0;i<hobby.length;i++){
         if(hobby[i].checked){
             hobbyArray.push(hobby[i].value);
+        }else if (hobby[0].checked){
+            hobby[0].checked=false;
+        }else{
+            hobby[1].checked=false;
         }
     }
 
