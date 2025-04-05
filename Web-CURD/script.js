@@ -31,7 +31,6 @@ const display=()=>{
         <td>${idx+1}</td>
         <td>${val.p_name}</td>
         <td>${val.price}</td>
-        <td></td>
         <td>
             <button class="btn btn-success" onclick="addTocart(${idx})">Add to cart</button>
         </td>
