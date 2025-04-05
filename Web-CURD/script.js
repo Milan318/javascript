@@ -24,15 +24,16 @@ form.addEventListener("submit",(e)=>{
 
 const display=()=>{
     table.innerHTML = "";
-    data.map((val,idx)=>{
+    data.map((val,index)=>{
         let tr = document.createElement("tr")
         tr.innerHTML = 
         `
-        <td>${idx+1}</td>
+        <td>${index+1}</td>
         <td>${val.p_name}</td>
         <td>${val.price}</td>
         <td>
-            <button class="btn btn-success" onclick="addTocart(${idx})">Add to cart</button>
+            <button class="btn btn-success" onclick="addTocart(${index})">Add to cart</button>
+            <button class="btn btn-danger" onclick="addTocart(${index})">Delete</button>
         </td>
         `
         table.append(tr)
@@ -42,6 +43,6 @@ display()
 
 const addTocart = (idx)=>{
     const product = data[idx]; 
-    cart.push(product)
+    cart.push(product)  
     localStorage.setItem("cart",JSON.stringify(cart));
 }
