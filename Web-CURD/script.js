@@ -3,7 +3,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let form = document.getElementById("form");
 let p_name = document.getElementById("p_name");
 let price = document.getElementById("price");
-let table = document.querySelector("#table tbody")
+let table = document.querySelector("#table tbody");
+let cartData = document.querySelector(".offcanvas-body ul");
 p_name.focus();
 
 form.addEventListener("submit",(e)=>{
@@ -24,7 +25,7 @@ form.addEventListener("submit",(e)=>{
 
 const display=()=>{
     table.innerHTML = "";
-    data.map((val,index)=>{
+    data.forEach((val,index)=>{
         let tr = document.createElement("tr")
         tr.innerHTML = 
         `
@@ -32,8 +33,8 @@ const display=()=>{
         <td>${val.p_name}</td>
         <td>${val.price}</td>
         <td>
-            <button class="btn btn-success" onclick="addTocart(${index})">Add to cart</button>
-            <button class="btn btn-danger" onclick="addTocart(${index})">Delete</button>
+            <button class="btn btn-success" onclick="addTocart(${index})"><i class="bi bi-cart-check-fill"></i></button>
+            <button class="btn btn-danger" onclick="deletebtn(${index})"><i class="bi bi-trash3-fill"></i></button>
         </td>
         `
         table.append(tr)
@@ -41,8 +42,45 @@ const display=()=>{
 }
 display()
 
-const addTocart = (idx)=>{
-    const product = data[idx]; 
+// --------------add-to-cart----------
+
+const addTocart = (index)=>{
+    const product = data[index]; 
     cart.push(product)  
     localStorage.setItem("cart",JSON.stringify(cart));
+    displaycart()
 }
+
+// -----------------delete-------------
+
+const deletebtn = (index)=>{
+   data.splice(index,1)
+   localStorage.setItem("productData",JSON.stringify(data))
+   display()
+}
+
+// -----------------------cart------------------
+
+const displaycart=()=>{
+    cartData.innerHTML = "";
+    cart.forEach((val,index)=>{
+        let list = document.createElement("li")
+        list.innerHTML = 
+        `
+        <span>${val.p_name}</span>
+        <span>${val.price}</span>
+        <span>
+            <button class="btn btn-danger" onclick="deletebtn2(${index})"><i class="bi bi-trash3-fill"></i></button>
+        </span>
+        `
+        cartData.append(list)
+    })
+}
+
+displaycart();
+
+const deletebtn2 = (index)=>{
+    cart.splice(index,1)
+    localStorage.setItem("cart",JSON.stringify(cart));
+    displaycart()
+ }
