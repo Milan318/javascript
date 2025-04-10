@@ -45,7 +45,7 @@ async function loadMovies(reset = false) {
 }
 
 searchBtn.addEventListener('click', () => {
-  currentQuery = searchInput.value.trim() || 'avengers';
+  currentQuery = searchInput.value.trim() || currentQuery ;
   loadMovies(true);
 });
 
