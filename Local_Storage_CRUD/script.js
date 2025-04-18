@@ -13,7 +13,7 @@ let edit = -1;
 username.focus();
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
-
+    //gender
     let genderValue = '';
     if(gender[0].checked){
         genderValue=gender[0].value;
@@ -23,7 +23,7 @@ form.addEventListener('submit',(event)=>{
         genderValue=gender[1].value;
         gender[1].checked=false;
     }
-
+    //hobby
     let hobbyArray =[];
     for (i=0;i<hobby.length;i++){
         if(hobby[i].checked){
@@ -34,7 +34,7 @@ form.addEventListener('submit',(event)=>{
             hobby[1].checked=false;
         }
     }
-
+    //city
     let cityValue = [];
 
     for (i = 0; i < city.length; i++) {
